@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//engagement-invite//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mohammad-layan-20261127@engagement-invite
+DTSTAMP:20261116T000000Z
+DTSTART:20261127T170000Z
+DTEND:20261127T190000Z
+SUMMARY:حفل خطوبة محمد خالد عتمه وليان الرفا
+ عي
+LOCATION:صالة قصر الشام الملكية، المزة، دمشق
+DESCRIPTION:الموقع على الخريطة: https://maps.app.goo.gl/mym
+ 5dYzm7wmxYik6A
+URL:https://maps.app.goo.gl/mym5dYzm7wmxYik6A
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:حفل خطوبة محمد خالد عتمه وليان الر
+ فاعي
+END:VALARM
+END:VEVENT
+END:VCALENDAR
