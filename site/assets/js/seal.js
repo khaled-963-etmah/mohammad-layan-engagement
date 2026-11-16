@@ -158,7 +158,14 @@
   var armed = false;
   function arm() {
     if (armed) return; armed = true;
-    setTimeout(function () { if (!(v.currentTime > 0.2)) skip(); }, 4500);
+    // still downloading on a slow connection: keep waiting (up to 15 s); loaded but not playing: skip
+    var waited = 0;
+    (function check() {
+      if (v.currentTime > 0.2) return;
+      var loading = v.readyState < 3 && v.networkState === 2;
+      if (waited >= 15000 || (!loading && waited >= 4500)) return skip();
+      waited += 1500; setTimeout(check, 1500);
+    })();
   }
   overlay.addEventListener("click", arm); overlay.addEventListener("touchstart", arm, { passive: true });
   v.addEventListener("error", function () { if (armed) skip(); });
